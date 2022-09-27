@@ -1,0 +1,231 @@
+/*
+
+- FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+
+
+- SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+:root {
+  --primary-color: #ffd200;
+  --primary-color-dark: #f0b000;
+  --primary-color-light: #ffee66;
+  --primary-lighter-color: #fff1b0;
+  --secondary-color: #4fff66;
+  --secondary-color-dark: #00aa11;
+  --secondary-color-light: #9fffaa;
+  --secondary-lighter-color: #aaffbb;
+  --special-color: #3b3950;
+  --special-color-dark: #272736;
+  --white-color: #f5f5f5;
+  --very-light-color: #ddd;
+  --dark-color: #222;
+  --very-dark-color: #090909;
+  --text-color: #777;
+  --text-color-darker: #333;
+  --clr-neon: #aaffbb;
+  --clr-bg: #2e4633;
+}
+
+body {
+  /* position: relative; */
+  font-family: "Josefin Sans", "Lalezar", sans-serif;
+  /* line-height: 1;
+  font-weight: 400;
+  color: var(--very-light-color);
+  
+  overflow-x: hidden; */
+}
+
+/********fixed button*******/
+.arrow-up {
+  position: fixed;
+  right: 15px;
+  bottom: 45px;
+  z-index: 50;
+}
+
+p {
+  font-size: 24px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+/* ***************************** */
+/* HEADER */
+/* ***************************** */
+
+/* ***************************** */
+/* NAVIGATION */
+/* ***************************** */
+
+.logo {
+  max-width: 55px;
+}
+
+/* ***************************** */
+/* SECTION HOME */
+/* ***************************** */
+.home {
+  min-height: 98vh;
+}
+
+.color-green {
+  color: var(--secondary-color);
+}
+.bg-color-green {
+  background-color: var(--secondary-color);
+}
+.color-green-dark {
+  color: var(--secondary-color-dark);
+}
+.bg-color-green-dark {
+  background-color: var(--secondary-color-dark);
+}
+.color-green-light {
+  color: var(--secondary-color-light);
+}
+.color-special {
+  color: var(--special-color);
+}
+.bg-color-special {
+  background-color: var(--special-color);
+}
+.color-special-dark {
+  color: var(--special-color-dark);
+}
+.bg-color-special-dark {
+  background-color: var(--special-color-dark);
+}
+
+.clear-dec {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+.clear-dec:hover {
+  color: var(--primary-color-dark);
+}
+
+/* ***************************** */
+/* SECTION SKILLS */
+/* ***************************** */
+.skill-box {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  margin: 15px;
+  background-color: var(--special-color-dark);
+  font-size: xx-large;
+  padding-top: 35px;
+}
+
+div > i {
+  font-size: 85px;
+}
+
+.html-color {
+  color: #e34c26;
+}
+.css-color {
+  color: #264de4;
+}
+.js-color {
+  color: #f7df1e;
+}
+.react-color {
+  color: #61dbfb;
+}
+.node-color {
+  color: #3c873a;
+}
+.aws-color {
+  color: #ff9900;
+}
+.github-color {
+  color: #e8eaea;
+}
+
+/* ***************************** */
+/* SECTION PROJECTS */
+/* ***************************** */
+.project-box {
+  width: 310px;
+  height: 310px;
+  margin: 15px;
+  border-radius: 10px;
+  background-color: var(--special-color);
+  overflow: hidden;
+}
+.project-box img {
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+.project-box img:hover {
+  transform: scale(1.2);
+}
+
+/* ***************************** */
+/* SECTION CONTACT */
+/* ***************************** */
+.send-mail {
+  background-color: #4fff67aa;
+  border: none;
+  padding: 15px;
+}
+.send-mail:hover {
+  background-color: #15a824de;
+}
+
+.lg-icons {
+  font-size: 55px;
+}
+
+.trans-scale a {
+  transition: transform 0.3s;
+}
+.trans-scale a:hover {
+  transform: scale(1.2);
+}
+
+.trans-scale .skill-box {
+  transition: transform 0.3s;
+}
+.trans-scale .skill-box:hover {
+  transform: scale(1.1);
+}
+
+/***************************/
+/* NEON */
+/**************************/
+
+.neon-button {
+  /* text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor; */
+
+  box-shadow: inset 0 0 0.2em 0 var(--very-light-color),
+    0 0 0.3em 0 var(--very-light-color);
+
+  position: relative;
+}
+
+.neon-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 1em 0.2em var(--very-light-color);
+  opacity: 0;
+  background-color: var(--very-light-color);
+  z-index: -1;
+  transition: opacity 100ms linear;
+}
